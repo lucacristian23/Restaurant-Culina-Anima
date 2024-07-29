@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
+body {
+  margin: 0;
+  background: #faf8f8;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center the .container horizontally */
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  text-align: center; /* Align contents of nav to center */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block; /* Display ul as inline-block to center it */
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 20px; /* Reduced margin for better spacing */
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 15px; /* Added padding for better touch/click target */
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.imgContainer {
+  width: 120px;
+}
+
+.imgContainer img {
+  width: 100%;
+}
+
+.itemDescription {
+  padding-left: 15px;
+}
+
+.leftContainer,
+.rightContainer {
+  display: flex;
+  align-items: center;
+}
+
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  margin-top: 25px;
+}
+
+.isFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.notFavorite {
+  width: 40px;
+  height: 40px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .imgContainer {
+    width: 100%; /* Occupy full width of the parent */
+    height: 50%; /* Occupy full height of the parent */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black; /* Optional: for visual confirmation of container dimensions */
+  }
+
+  .imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container proportionally */
+  }
+
+  .itemDescription {
+    padding-left: 15px;
+  }
+
+  .leftContainer,
+  .rightContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .itemContainer {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    margin-top: 4vh;
+  }
+
+  .isFavorite {
+    width: 40px;
+    height: 40px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/35/Emoji_u2665.svg");
+    background-size: 100%;
+    align-self: flex-start;
+  }
+
+  .notFavorite {
+    width: 40px;
+    height: 40px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ei-heart.svg");
+    background-size: 100%;
+    align-self: flex-start;
+  }
+}
+
+.mainVerticalContainer {
+  display: flex; /* Use flexbox layout */
+
+  flex-direction: column; /* Place elements vertically */
+  align-items: center;
+  justify-content: flex-start; /* Justify items to the start of the container */
+  gap: 10px; /* Add space between the elements */
+
+  height: 40vh;
+}
+/*
+.descriptionAndPriceContainer {
+  border: 2px solid rgb(156, 6, 6); 
+}
+
+
+*/
+
+.full-height-map {
+  height: 50vh;
+  width: 100%;
+}
+
+:global(.leaflet-popup .leaflet-popup-content-wrapper) {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+:global(.leaflet-popup .leaflet-popup-content) {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+:global(.leaflet-popup .leaflet-popup-content span:first-child) {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+:global(.leaflet-popup .leaflet-popup-tip) {
+  background-color: var(--color-dark--1);
+}
+
+:global(.leaflet-popup-content-wrapper) {
+  border-left: 5px solid var(--color-brand--2);
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
